@@ -22,7 +22,8 @@ The product is not limited to one business process or to CSV/Excel. Its analysis
 | Demo workflows | Customer support, purchasing approvals, employee onboarding |
 | Interaction | Highlighted controls and supported typed questions |
 | Product application | Primarily TypeScript, Next.js, and React |
-| Live hosting | Vercel for frontend, backend, and supported background processing |
+| Hosting | Cloudflare for the landing page, demo, live frontend/backend, and supported background processing |
+| Public addresses | avatar-ai.xyz (landing), demo.avatar-ai.xyz (demo), app.avatar-ai.xyz (live product) |
 | Live identity and database | Supabase Auth and Supabase PostgreSQL |
 | Live document storage | Private Supabase Storage |
 | Hosted AI | Claude API as a replaceable initial planning default; OpenAI API remains an option |
@@ -96,7 +97,7 @@ The final action is **“Voir la proposition”**, followed by **“Préparer un
 - Zod for validating scenario bundles.
 - Node.js/TypeScript scripts for generation and offline metrics.
 - Vitest for analysis and fixture checks; Playwright for user journeys.
-- Static export deployed on Vercel, with a local command to serve the same production build.
+- Static export served through Cloudflare Workers Static Assets, with a local command to serve the same production build.
 - Neutral working title: **“Agent Process”** until branding is chosen.
 
 The demo does not require PostgreSQL, Supabase Auth, workers, or a hosted AI API at runtime. Its offline calculations run in TypeScript; later SQL implementations must use the same metric definitions and regression examples.
@@ -141,7 +142,7 @@ Introduce Python behind that interface once a required algorithm or benchmark ju
 
 Evaluate PM4Py for specialist mining, subject to its AGPL/commercial licensing terms before adoption. Maintain common reference datasets so SQL, TypeScript, and Python results agree on shared metrics.
 
-Benchmark Python workloads against Vercel's supported runtime, package, memory, and duration limits. Split work into bounded steps where practical. If a required workload cannot fit, document the evidence and revisit compute hosting before promising support. No separate Python infrastructure is required for the demo.
+Keep bulk calculations in PostgreSQL where appropriate and orchestration in Cloudflare Workers. Standard Workers currently have a 128 MB memory limit per isolate and CPU limits that vary by invocation type. A long-lived Workflow does not provide unlimited CPU or memory. Do not assume native Python mining packages run unchanged in the Workers runtime. Benchmark specialist workloads; if one cannot fit the supported environment, execute it through a separately managed compute service behind the versioned analysis interface. That service introduces its own cost. No Python service is needed for the synthetic demo.
 
 ## 4. Live product architecture
 
@@ -149,8 +150,10 @@ Benchmark Python workloads against Vercel's supported runtime, package, memory, 
 
 | Layer | Selected direction |
 |---|---|
-| Frontend and backend | Next.js on Vercel |
-| Background orchestration | Vercel Workflow and Queues |
+| Landing page | Existing static site migrated to Cloudflare Workers Static Assets |
+| Public demo | Next.js static export on Cloudflare Workers Static Assets |
+| Live frontend and backend | TypeScript/React application hosted on Cloudflare Workers |
+| Background orchestration | Cloudflare Workflows and Queues |
 | Authentication | Supabase Auth |
 | Relational data | Supabase PostgreSQL |
 | Original files | Private Supabase Storage |
@@ -158,7 +161,11 @@ Benchmark Python workloads against Vercel's supported runtime, package, memory, 
 | Standard calculations | SQL and TypeScript |
 | Specialist mining | Optional Python analysis component |
 
-Vercel work must use bounded, retryable steps and durable job records. Validate representative imports against current limits and product availability; Queues was documented as beta when this plan was prepared.
+Workers execute application requests; Workflows coordinate durable steps; Queues buffer independently retryable work. Store job status in PostgreSQL and make consumers idempotent. Bound payloads, concurrency, retries, and step counts. Validate representative imports against current runtime limits.
+
+Next.js remains the static demo framework. For the live application, validate its required server features using Cloudflare's current deployment guidance before committing to framework-specific backend features. Cloudflare currently recommends vinext for new Next.js-style applications and documents OpenNext for existing deployments. Full Node.js compatibility must not be assumed. Keep business services independent of the framework adapter.
+
+Use separate Cloudflare deployments for the landing page, demo, and live app. Supabase and the hosted model remain external services. Cloudflare's website Free/Pro subscription and Workers Paid are different products; do not buy a website Pro upgrade merely to enable Workers Paid.
 
 Claude API is the initial planning default, not a finalized model selection. Evaluate candidate models for French quality, tool-call correctness, latency, and cost before customer deployment. Keep provider-specific code behind an adapter; do not build two providers before needed.
 
@@ -242,6 +249,57 @@ Set customer-facing performance targets after representative benchmarks. Start w
 
 PostgreSQL is the initial live database. Consider ClickHouse, DuckDB, or distributed processing only for demonstrated workload needs; they do not replace evidence reconstruction or validation.
 
+### Cost model and controls
+
+Cloudflare is selected for its fit and lower entry cost for this design, not as a guarantee that it is always cheaper than Vercel. The Workers Paid subscription is a minimum charge with usage allowances, not a fixed all-inclusive bill.
+
+Pricing reference checked on 2026-10-17; USD before applicable taxes:
+
+| Resource | Included usage | Additional usage |
+|---|---|---|
+| Workers Paid subscription | $5/month minimum per account | Usage charges below and any other enabled products |
+| Dynamic Worker requests | 10 million/month | $0.30 per additional million |
+| Active CPU | 30 million milliseconds/month, about 8.3 hours | $0.02 per additional million milliseconds |
+| Direct static asset requests | Free and unlimited | Invoking Worker code may incur request/CPU usage |
+| Queues | 1 million operations/month | $0.40 per additional million operations |
+| Workflow steps | 500,000/month | $0.80 per additional 100,000 |
+| Workflow state storage | 1 GB-month | $0.20 per additional GB-month |
+
+Workflows share Workers request and CPU allowances; they do not provide a second independent allotment. A queue message normally requires write, read, and delete operations; retries add operations. Workflow state retention also affects storage usage. Check current billing semantics before release.
+
+Standard Workers do not add egress/bandwidth charges, but other products can have separate billing. R2, KV, Durable Objects, logs, builds, image processing, Containers, or other services must be budgeted if introduced. Do not enable optional products without identifying their meter and intended use.
+
+The static landing page and prepared demo can fit the Free plan within published build, asset, and deployment limits. They do not need paid Workers or model calls simply because visitors explore them. Select Workers Paid when the live workload needs it; free dynamic execution limits are not suitable assumptions for heavy processing.
+
+Supabase, the hosted AI API, domain renewal, any email delivery service, and any specialist compute service are separate cost lines. Moving hosting does not eliminate these costs.
+
+Controls required before a real-data pilot:
+
+- Engineer B maintains an inventory of enabled services, pricing, expected usage, and cost per customer.
+- Record baseline, expected, and high-load estimates from representative imports and questions.
+- Configure per-company import, file-size, concurrency, query, and model-token quotas; check them before accepting expensive work.
+- Set Worker CPU limits and bounded retry/step limits. Keep heavy payloads in storage and pass references.
+- Track usage across Workers, Workflows, Queues, Supabase, and model calls; configure budget alerts.
+- Provide a server-enforced switch to pause new costly jobs and model calls while preserving access to existing results.
+- Treat alerts and per-invocation CPU limits as controls, not an account-wide hard spending cap.
+- Document whether each provider offers a hard cap; do not promise a universal cap without verifying enforcement.
+
+Before enabling paid live services, record the chosen operating budget and quota configuration. No monthly cost estimate is a guarantee without workload assumptions.
+
+### Domain migration and cutover
+
+The domain remains avatar-ai.xyz. Host the existing landing page on avatar-ai.xyz, the prepared demo on demo.avatar-ai.xyz, and the live application later on app.avatar-ai.xyz. Subdomains require DNS configuration, not separate domain purchases.
+
+1. Inventory current DNS, hosting, redirects, and any mail-related records. Confirm account and registrar access.
+2. Deploy the existing landing page to a Cloudflare preview and verify pages, images, links, forms, and mobile behavior.
+3. Deploy the demo separately and verify its full guided journeys.
+4. Configure custom domains and TLS, then update only the required DNS records. Preserve email records and other unrelated services.
+5. Verify HTTPS, apex/www redirects, deep links, assets, and landing-to-demo navigation on the actual domains.
+6. Retain the Vercel deployment for rollback during the cutover; remove its domain association and paid subscription only after successful verification, if no other projects depend on them.
+7. When the live app exists, configure its own authentication redirects, origin checks, and cookie scope; customer sessions must remain separate from the public demo.
+
+This document records the migration plan. No hosting account, DNS record, deployment, or subscription is changed by updating it.
+
 ## 6. Delivery and ownership
 
 ### Demo: four-week planning estimate
@@ -251,7 +309,7 @@ PostgreSQL is the initial live database. Consider ClickHouse, DuckDB, or distrib
 | 1 | Interface shell, design system, guided flow | Types, generator, metrics, first scenario | One complete journey |
 | 2 | Dashboard, evidence viewer, conversation | Three datasets, comparisons, prepared answers | All scenarios use shared components |
 | 3 | Responsive design, accessibility, recording mode | Validation, reset/recovery, regression checks | Every displayed result agrees with records |
-| 4 | User walkthroughs, French marketing materials | Performance checks, release packaging, deployment | Publishable release candidate |
+| 4 | User walkthroughs, French marketing materials | Performance checks, Cloudflare deployment, verified landing-page cutover | Publishable release candidate |
 
 Review progress weekly. The schedule is an estimate rather than a committed launch date.
 
@@ -269,8 +327,10 @@ Engineer A owns experience and marketing presentation. Engineer B owns data inte
 - Keyboard access, mobile layouts, and reduced motion work.
 - No customer records, credentials, live model calls, or live integrations are present in the public build.
 - Any apparent automated action is clearly simulated.
+- Cloudflare preview and production assets, redirects, deep links, and scenario routes work.
+- The static demo does not accidentally invoke backend code or paid services.
 
-For live analysis, additionally test cross-company access attempts, source permissions, retries, mapping corrections, model/tool failures, deletion, and result consistency across implementations.
+For live analysis, additionally test cross-company access attempts, source permissions, retries, mapping corrections, model/tool failures, deletion, and result consistency across implementations. Validate memory/CPU bounds, duplicate queue delivery, exhausted quotas, and the costly-job pause switch. Test the application in the Cloudflare runtime, not only a local Node.js development server.
 
 Conduct five moderated walkthroughs before publication. Target at least four users completing the main journey without developer intervention and accurately explaining the finding and proposal.
 
@@ -322,7 +382,12 @@ Keep customer records private when generalizing improvement templates. A templat
 ## 9. Supporting references
 
 - [Next.js static exports](https://nextjs.org/docs/app/guides/static-exports)
-- [Vercel Queues and Workflow relationship](https://vercel.com/docs/queues)
+- [Cloudflare Workers Static Assets](https://developers.cloudflare.com/workers/static-assets/)
+- [Cloudflare Workers pricing](https://developers.cloudflare.com/workers/platform/pricing/)
+- [Cloudflare Workers limits](https://developers.cloudflare.com/workers/platform/limits/)
+- [Cloudflare Workflows pricing](https://developers.cloudflare.com/workflows/reference/pricing/)
+- [Cloudflare Queues pricing](https://developers.cloudflare.com/queues/platform/pricing/)
+- [Cloudflare framework deployment guidance](https://developers.cloudflare.com/workers/framework-guides/automatic-configuration/)
 - [Supabase Auth architecture](https://supabase.com/docs/guides/auth/architecture)
 - [Supabase connection management](https://supabase.com/docs/guides/database/connection-management)
 - [Supabase Storage](https://supabase.com/storage)
