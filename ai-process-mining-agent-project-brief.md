@@ -1,5 +1,7 @@
 # AI Process Mining Agent: Product and Technical Brief
 
+> For current delivery decisions, see the [Product Delivery Plan](ai-process-mining-agent-product-plan.md). This earlier brief records the exploratory discussion.
+
 > Working concept consolidated from the project discussion on October 10–11, 2026.
 > This document describes a proposed product and architecture. It is not an implemented system, a finalized specification, or a performance guarantee.
 
