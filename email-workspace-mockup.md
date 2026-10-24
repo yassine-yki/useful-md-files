@@ -26,3 +26,7 @@ Replies sent directly through the email provider should also update the dashboar
 Connected accounts and navigation sit on the left, ranked conversations in the center, and the assistant with an editable reply draft on the right. Chat and dashboard share the same conversation and draft state.
 
 **Mailroom** is a placeholder name. All names, emails, counts, and messages in the image are sample content. This is an AI-generated visual concept, not a working application. Provider connections, ranking, drafting, and sending are proposed behavior.
+
+## Latest approved revision
+
+The product is now named **Avatar Mail**. See the [latest approved mockups in French](avatar-mail-maquettes-fr.md), including follow-ups and staying on the ranked list after sending without automatically opening another conversation. The original image above is retained as an earlier concept.
