@@ -1,0 +1,39 @@
+1
+00:00:00,650 --> 00:00:02,220
+Salut ! Moi, c'est BIP.
+
+2
+00:00:02,220 --> 00:00:03,800
+Et toi, t'as une idée ?
+
+3
+00:00:08,750 --> 00:00:11,100
+Bienvenue au Club IT de HESTIM !
+
+4
+00:00:11,100 --> 00:00:13,100
+Ici, la tech, c'est entre potes.
+
+5
+00:00:13,950 --> 00:00:17,650
+Du code, de l'IA, de la cyber, des robots.
+
+6
+00:00:17,650 --> 00:00:19,900
+On teste, on crée, ensemble !
+
+7
+00:00:21,050 --> 00:00:22,420
+Pas besoin de tout savoir.
+
+8
+00:00:22,420 --> 00:00:24,050
+Ramène ta curiosité !
+
+9
+00:00:25,150 --> 00:00:27,800
+Des idées. Des potes. Des projets.
+
+10
+00:00:27,800 --> 00:00:28,550
+Rejoins-nous !
