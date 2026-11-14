@@ -4,6 +4,16 @@ Première version complète de la vidéo de présentation du club en motion grap
 
 **Des idées. Des potes. Des projets.**
 
+## Version TV — mise à jour
+
+[Voir ou télécharger la vidéo TV Full HD](assets/bip-club-motion-graphics/bip-club-tv-1080p.mp4)
+
+Format paysage 16:9, 1920 × 1080, 30 images par seconde. Les compositions sont adaptées à un téléviseur, avec des décors animés enrichis. Les numérotations « BIP / 01 » en haut à droite sont retirées de toutes les scènes. Voix, musique et durée conservées.
+
+![Aperçu de la version TV](assets/bip-club-motion-graphics/preview-tv.png)
+
+## Version verticale originale
+
 [Voir ou télécharger la vidéo MP4](assets/bip-club-motion-graphics/bip-club-motion-graphics.mp4)
 
 [Télécharger les sous-titres français SRT](assets/bip-club-motion-graphics/captions.fr.srt)
