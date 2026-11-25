@@ -1,0 +1,228 @@
+{
+  "id": 45578132719,
+  "url": "https://github.com/yassine-yki/VIrtus_mainrepo/actions/runs/45578132719",
+  "event": "schedule",
+  "sha": "2462e980fc9765c1de49b6c3c247f049b1fd6151",
+  "status": "completed",
+  "conclusion": "failure",
+  "maxConcurrency": 2,
+  "successful": 32,
+  "total": 34,
+  "active": [],
+  "failed": [
+    {
+      "id": 139081249150,
+      "name": "collect (wadifa)"
+    },
+    {
+      "id": 139081255340,
+      "name": "collect (veolia)"
+    }
+  ],
+  "jobs": [
+    {
+      "name": "collect (devoteam)",
+      "conclusion": "success",
+      "started_at": "2026-11-25T08:40:11Z",
+      "completed_at": "2026-11-25T08:40:50Z"
+    },
+    {
+      "name": "collect (accorhotel)",
+      "conclusion": "success",
+      "started_at": "2026-11-25T08:39:25Z",
+      "completed_at": "2026-11-25T08:40:06Z"
+    },
+    {
+      "name": "collect (himalayas)",
+      "conclusion": "success",
+      "started_at": "2026-11-25T08:42:26Z",
+      "completed_at": "2026-11-25T08:46:13Z"
+    },
+    {
+      "name": "collect (nuitee)",
+      "conclusion": "success",
+      "started_at": "2026-11-25T08:41:47Z",
+      "completed_at": "2026-11-25T08:42:05Z"
+    },
+    {
+      "name": "collect (sqli)",
+      "conclusion": "success",
+      "started_at": "2026-11-25T08:40:56Z",
+      "completed_at": "2026-11-25T08:41:43Z"
+    },
+    {
+      "name": "collect (egis)",
+      "conclusion": "success",
+      "started_at": "2026-11-25T08:44:08Z",
+      "completed_at": "2026-11-25T08:44:28Z"
+    },
+    {
+      "name": "collect (accor)",
+      "conclusion": "success",
+      "started_at": "2026-11-25T08:39:26Z",
+      "completed_at": "2026-11-25T08:39:56Z"
+    },
+    {
+      "name": "collect (wikimedia)",
+      "conclusion": "success",
+      "started_at": "2026-11-25T08:42:09Z",
+      "completed_at": "2026-11-25T08:42:21Z"
+    },
+    {
+      "name": "collect (wadifa)",
+      "conclusion": "failure",
+      "started_at": "2026-11-25T08:42:08Z",
+      "completed_at": "2026-11-25T08:42:22Z"
+    },
+    {
+      "name": "collect (alten)",
+      "conclusion": "success",
+      "started_at": "2026-11-25T08:40:01Z",
+      "completed_at": "2026-11-25T08:41:45Z"
+    },
+    {
+      "name": "collect (energy-recovery)",
+      "conclusion": "success",
+      "started_at": "2026-11-25T08:41:49Z",
+      "completed_at": "2026-11-25T08:42:04Z"
+    },
+    {
+      "name": "collect (inetum)",
+      "conclusion": "success",
+      "started_at": "2026-11-25T08:42:27Z",
+      "completed_at": "2026-11-25T08:44:03Z"
+    },
+    {
+      "name": "collect (socotec)",
+      "conclusion": "success",
+      "started_at": "2026-11-25T08:44:33Z",
+      "completed_at": "2026-11-25T08:44:54Z"
+    },
+    {
+      "name": "collect (bosch)",
+      "conclusion": "success",
+      "started_at": "2026-11-25T08:44:58Z",
+      "completed_at": "2026-11-25T08:45:12Z"
+    },
+    {
+      "name": "collect (veolia)",
+      "conclusion": "failure",
+      "started_at": "2026-11-25T08:45:17Z",
+      "completed_at": "2026-11-25T08:45:34Z"
+    },
+    {
+      "name": "collect (sgs)",
+      "conclusion": "success",
+      "started_at": "2026-11-25T08:45:38Z",
+      "completed_at": "2026-11-25T08:45:57Z"
+    },
+    {
+      "name": "collect (wavestone)",
+      "conclusion": "success",
+      "started_at": "2026-11-25T08:46:02Z",
+      "completed_at": "2026-11-25T08:46:17Z"
+    },
+    {
+      "name": "collect (yassir)",
+      "conclusion": "success",
+      "started_at": "2026-11-25T08:46:18Z",
+      "completed_at": "2026-11-25T08:46:36Z"
+    },
+    {
+      "name": "collect (cloudbeds)",
+      "conclusion": "success",
+      "started_at": "2026-11-25T08:46:22Z",
+      "completed_at": "2026-11-25T08:46:39Z"
+    },
+    {
+      "name": "collect (scalian)",
+      "conclusion": "success",
+      "started_at": "2026-11-25T08:46:40Z",
+      "completed_at": "2026-11-25T08:47:28Z"
+    },
+    {
+      "name": "collect (theodo)",
+      "conclusion": "success",
+      "started_at": "2026-11-25T08:46:43Z",
+      "completed_at": "2026-11-25T08:46:55Z"
+    },
+    {
+      "name": "collect (alter-solutions)",
+      "conclusion": "success",
+      "started_at": "2026-11-25T08:47:00Z",
+      "completed_at": "2026-11-25T08:47:20Z"
+    },
+    {
+      "name": "collect (mindera)",
+      "conclusion": "success",
+      "started_at": "2026-11-25T08:47:25Z",
+      "completed_at": "2026-11-25T08:47:39Z"
+    },
+    {
+      "name": "collect (artefact)",
+      "conclusion": "success",
+      "started_at": "2026-11-25T08:47:43Z",
+      "completed_at": "2026-11-25T08:47:55Z"
+    },
+    {
+      "name": "collect (infomineo)",
+      "conclusion": "success",
+      "started_at": "2026-11-25T08:47:32Z",
+      "completed_at": "2026-11-25T08:47:44Z"
+    },
+    {
+      "name": "collect (arcsen)",
+      "conclusion": "success",
+      "started_at": "2026-11-25T08:47:49Z",
+      "completed_at": "2026-11-25T08:48:14Z"
+    },
+    {
+      "name": "collect (the-flex)",
+      "conclusion": "success",
+      "started_at": "2026-11-25T08:48:20Z",
+      "completed_at": "2026-11-25T08:48:37Z"
+    },
+    {
+      "name": "collect (capgemini)",
+      "conclusion": "success",
+      "started_at": "2026-11-25T08:48:42Z",
+      "completed_at": "2026-11-25T08:50:22Z"
+    },
+    {
+      "name": "collect (harmattan-ai)",
+      "conclusion": "success",
+      "started_at": "2026-11-25T08:48:00Z",
+      "completed_at": "2026-11-25T08:48:19Z"
+    },
+    {
+      "name": "collect (supportyourapp)",
+      "conclusion": "success",
+      "started_at": "2026-11-25T08:48:23Z",
+      "completed_at": "2026-11-25T08:48:48Z"
+    },
+    {
+      "name": "collect (cgi)",
+      "conclusion": "success",
+      "started_at": "2026-11-25T08:48:52Z",
+      "completed_at": "2026-11-25T08:49:20Z"
+    },
+    {
+      "name": "collect (cegedim)",
+      "conclusion": "success",
+      "started_at": "2026-11-25T08:49:25Z",
+      "completed_at": "2026-11-25T08:49:43Z"
+    },
+    {
+      "name": "collect (inwi)",
+      "conclusion": "success",
+      "started_at": "2026-11-25T08:49:47Z",
+      "completed_at": "2026-11-25T08:50:01Z"
+    },
+    {
+      "name": "collect (leyton-morocco)",
+      "conclusion": "success",
+      "started_at": "2026-11-25T08:50:05Z",
+      "completed_at": "2026-11-25T08:50:20Z"
+    }
+  ]
+}

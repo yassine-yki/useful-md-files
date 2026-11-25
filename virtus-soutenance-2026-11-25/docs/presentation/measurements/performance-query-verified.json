@@ -1,0 +1,299 @@
+{
+  "label": "query-verified",
+  "at": "2026-11-25T17:34:08.810Z",
+  "routes": [
+    {
+      "path": "/",
+      "first": {
+        "ttfb": 352,
+        "complete": 357,
+        "htmlBytes": 14177,
+        "region": "cdg1",
+        "cache": "PRERENDER"
+      },
+      "median": 64,
+      "samples": [
+        {
+          "ttfb": 352,
+          "complete": 357,
+          "htmlBytes": 14177,
+          "region": "cdg1",
+          "cache": "PRERENDER"
+        },
+        {
+          "ttfb": 205,
+          "complete": 206,
+          "htmlBytes": 14177,
+          "region": "cdg1",
+          "cache": "HIT"
+        },
+        {
+          "ttfb": 57,
+          "complete": 57,
+          "htmlBytes": 14177,
+          "region": "cdg1",
+          "cache": "HIT"
+        },
+        {
+          "ttfb": 63,
+          "complete": 64,
+          "htmlBytes": 14177,
+          "region": "cdg1",
+          "cache": "HIT"
+        },
+        {
+          "ttfb": 58,
+          "complete": 59,
+          "htmlBytes": 14177,
+          "region": "cdg1",
+          "cache": "HIT"
+        }
+      ]
+    },
+    {
+      "path": "/offres",
+      "first": {
+        "ttfb": 399,
+        "complete": 1590,
+        "htmlBytes": 146383,
+        "region": "cdg1::dub1",
+        "cache": "MISS"
+      },
+      "median": 625,
+      "samples": [
+        {
+          "ttfb": 399,
+          "complete": 1590,
+          "htmlBytes": 146383,
+          "region": "cdg1::dub1",
+          "cache": "MISS"
+        },
+        {
+          "ttfb": 103,
+          "complete": 629,
+          "htmlBytes": 146383,
+          "region": "cdg1::dub1",
+          "cache": "MISS"
+        },
+        {
+          "ttfb": 111,
+          "complete": 587,
+          "htmlBytes": 146383,
+          "region": "cdg1::dub1",
+          "cache": "MISS"
+        },
+        {
+          "ttfb": 107,
+          "complete": 625,
+          "htmlBytes": 146383,
+          "region": "cdg1::dub1",
+          "cache": "MISS"
+        },
+        {
+          "ttfb": 103,
+          "complete": 588,
+          "htmlBytes": 146383,
+          "region": "cdg1::dub1",
+          "cache": "MISS"
+        }
+      ]
+    },
+    {
+      "path": "/tech",
+      "first": {
+        "ttfb": 93,
+        "complete": 268,
+        "htmlBytes": 172184,
+        "region": "cdg1::dub1",
+        "cache": "MISS"
+      },
+      "median": 241,
+      "samples": [
+        {
+          "ttfb": 93,
+          "complete": 268,
+          "htmlBytes": 172184,
+          "region": "cdg1::dub1",
+          "cache": "MISS"
+        },
+        {
+          "ttfb": 99,
+          "complete": 209,
+          "htmlBytes": 172184,
+          "region": "cdg1::dub1",
+          "cache": "MISS"
+        },
+        {
+          "ttfb": 106,
+          "complete": 233,
+          "htmlBytes": 172184,
+          "region": "cdg1::dub1",
+          "cache": "MISS"
+        },
+        {
+          "ttfb": 137,
+          "complete": 241,
+          "htmlBytes": 172184,
+          "region": "cdg1::dub1",
+          "cache": "MISS"
+        },
+        {
+          "ttfb": 99,
+          "complete": 393,
+          "htmlBytes": 172184,
+          "region": "cdg1::dub1",
+          "cache": "MISS"
+        }
+      ]
+    },
+    {
+      "path": "/sources",
+      "first": {
+        "ttfb": 187,
+        "complete": 206,
+        "htmlBytes": 102632,
+        "region": "cdg1::dub1",
+        "cache": "MISS"
+      },
+      "median": 195,
+      "samples": [
+        {
+          "ttfb": 187,
+          "complete": 206,
+          "htmlBytes": 102632,
+          "region": "cdg1::dub1",
+          "cache": "MISS"
+        },
+        {
+          "ttfb": 177,
+          "complete": 195,
+          "htmlBytes": 102632,
+          "region": "cdg1::dub1",
+          "cache": "MISS"
+        },
+        {
+          "ttfb": 171,
+          "complete": 189,
+          "htmlBytes": 102632,
+          "region": "cdg1::dub1",
+          "cache": "MISS"
+        },
+        {
+          "ttfb": 202,
+          "complete": 220,
+          "htmlBytes": 102632,
+          "region": "cdg1::dub1",
+          "cache": "MISS"
+        },
+        {
+          "ttfb": 171,
+          "complete": 192,
+          "htmlBytes": 102632,
+          "region": "cdg1::dub1",
+          "cache": "MISS"
+        }
+      ]
+    },
+    {
+      "path": "/profil",
+      "first": {
+        "ttfb": 138,
+        "complete": 139,
+        "htmlBytes": 17852,
+        "region": "cdg1::dub1",
+        "cache": "MISS"
+      },
+      "median": 114,
+      "samples": [
+        {
+          "ttfb": 138,
+          "complete": 139,
+          "htmlBytes": 17852,
+          "region": "cdg1::dub1",
+          "cache": "MISS"
+        },
+        {
+          "ttfb": 113,
+          "complete": 114,
+          "htmlBytes": 17852,
+          "region": "cdg1::dub1",
+          "cache": "MISS"
+        },
+        {
+          "ttfb": 88,
+          "complete": 88,
+          "htmlBytes": 17852,
+          "region": "cdg1::dub1",
+          "cache": "MISS"
+        },
+        {
+          "ttfb": 129,
+          "complete": 131,
+          "htmlBytes": 17852,
+          "region": "cdg1::dub1",
+          "cache": "MISS"
+        },
+        {
+          "ttfb": 87,
+          "complete": 88,
+          "htmlBytes": 17852,
+          "region": "cdg1::dub1",
+          "cache": "MISS"
+        }
+      ]
+    },
+    {
+      "path": "/offres/41c5ae44ecc59bd0c58a4b2ac08e127b",
+      "first": {
+        "ttfb": 113,
+        "complete": 187,
+        "htmlBytes": 34917,
+        "region": "cdg1::dub1",
+        "cache": "MISS"
+      },
+      "median": 174,
+      "samples": [
+        {
+          "ttfb": 113,
+          "complete": 187,
+          "htmlBytes": 34917,
+          "region": "cdg1::dub1",
+          "cache": "MISS"
+        },
+        {
+          "ttfb": 102,
+          "complete": 161,
+          "htmlBytes": 34917,
+          "region": "cdg1::dub1",
+          "cache": "MISS"
+        },
+        {
+          "ttfb": 86,
+          "complete": 193,
+          "htmlBytes": 34917,
+          "region": "cdg1::dub1",
+          "cache": "MISS"
+        },
+        {
+          "ttfb": 87,
+          "complete": 174,
+          "htmlBytes": 34917,
+          "region": "cdg1::dub1",
+          "cache": "MISS"
+        },
+        {
+          "ttfb": 87,
+          "complete": 170,
+          "htmlBytes": 34917,
+          "region": "cdg1::dub1",
+          "cache": "MISS"
+        }
+      ]
+    }
+  ],
+  "smoke": {
+    "publicJobs": 114,
+    "detail": 200,
+    "matches": 401
+  }
+}

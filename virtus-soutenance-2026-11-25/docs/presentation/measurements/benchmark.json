@@ -1,0 +1,241 @@
+{
+  "date": "2026-11-25T08:17:48.928Z",
+  "node": "v24.22.3",
+  "method": "Single process, preclassified synthetic identical eligible jobs, 10 warmups, 50 sequential samples, no HTTP, DB or LLM",
+  "samples": [
+    {
+      "jobs": 100,
+      "runs": 50,
+      "p50_ms": 0.45759999999998513,
+      "p95_ms": 0.6162000000000205,
+      "max_ms": 0.6970000000000027
+    },
+    {
+      "jobs": 1000,
+      "runs": 50,
+      "p50_ms": 4.001999999999953,
+      "p95_ms": 4.728000000000009,
+      "max_ms": 5.071900000000028
+    },
+    {
+      "jobs": 5000,
+      "runs": 50,
+      "p50_ms": 19.644499999999994,
+      "p95_ms": 21.98230000000001,
+      "max_ms": 23.030599999999936
+    },
+    {
+      "jobs": 10000,
+      "runs": 50,
+      "p50_ms": 39.571100000000115,
+      "p95_ms": 41.91429999999991,
+      "max_ms": 43.04520000000002
+    }
+  ],
+  "sources": [
+    {
+      "id": "accor",
+      "name": "Accor",
+      "provider": "smartrecruiters",
+      "website": "https://careers.accor.com/fr/fr/morocco"
+    },
+    {
+      "id": "accorhotel",
+      "name": "Accor Hotels",
+      "provider": "smartrecruiters",
+      "website": "https://careers.accor.com/fr/fr/morocco"
+    },
+    {
+      "id": "alten",
+      "name": "ALTEN",
+      "provider": "smartrecruiters",
+      "website": "https://careers.smartrecruiters.com/ALTEN"
+    },
+    {
+      "id": "devoteam",
+      "name": "Devoteam",
+      "provider": "smartrecruiters",
+      "website": "https://www.devoteam.com/fr-ma/jobs/"
+    },
+    {
+      "id": "sqli",
+      "name": "SQLI",
+      "provider": "smartrecruiters",
+      "website": "https://careers.smartrecruiters.com/SQLI1"
+    },
+    {
+      "id": "nuitee",
+      "name": "Nuitée",
+      "provider": "greenhouse",
+      "website": "https://job-boards.eu.greenhouse.io/nuitee"
+    },
+    {
+      "id": "energy-recovery",
+      "name": "Energy Recovery",
+      "provider": "lever",
+      "website": "https://jobs.lever.co/energyrecovery"
+    },
+    {
+      "id": "wadifa",
+      "name": "Wadifa Info",
+      "provider": "wadifa",
+      "website": "https://www.wadifa-info.com/developpeurs"
+    },
+    {
+      "id": "wikimedia",
+      "name": "Wikimedia Foundation",
+      "provider": "greenhouse",
+      "website": "https://wikimediafoundation.org/jobs/"
+    },
+    {
+      "id": "himalayas",
+      "name": "Himalayas",
+      "provider": "himalayas",
+      "website": "https://himalayas.app"
+    },
+    {
+      "id": "inetum",
+      "name": "Inetum",
+      "provider": "smartrecruiters",
+      "website": "https://www.inetum.com/global/en/careers/jobs.html"
+    },
+    {
+      "id": "egis",
+      "name": "Egis Group",
+      "provider": "smartrecruiters",
+      "website": "https://jobs.egis-group.com/"
+    },
+    {
+      "id": "socotec",
+      "name": "SOCOTEC",
+      "provider": "smartrecruiters",
+      "website": "https://careers.smartrecruiters.com/Socotec"
+    },
+    {
+      "id": "bosch",
+      "name": "Bosch Group",
+      "provider": "smartrecruiters",
+      "website": "https://careers.smartrecruiters.com/BoschGroup"
+    },
+    {
+      "id": "veolia",
+      "name": "Veolia",
+      "provider": "smartrecruiters",
+      "website": "https://careers.smartrecruiters.com/VeoliaEnvironnementSA"
+    },
+    {
+      "id": "sgs",
+      "name": "SGS",
+      "provider": "smartrecruiters",
+      "website": "https://careers.smartrecruiters.com/SGS"
+    },
+    {
+      "id": "wavestone",
+      "name": "Wavestone",
+      "provider": "smartrecruiters",
+      "website": "https://careers.smartrecruiters.com/Wavestone1"
+    },
+    {
+      "id": "yassir",
+      "name": "Yassir",
+      "provider": "lever",
+      "website": "https://jobs.lever.co/Yassir"
+    },
+    {
+      "id": "cloudbeds",
+      "name": "Cloudbeds",
+      "provider": "greenhouse",
+      "website": "https://job-boards.greenhouse.io/cloudbeds"
+    },
+    {
+      "id": "scalian",
+      "name": "Scalian",
+      "provider": "smartrecruiters",
+      "website": "https://careers.smartrecruiters.com/Scalian"
+    },
+    {
+      "id": "theodo",
+      "name": "Theodo",
+      "provider": "lever",
+      "website": "https://jobs.lever.co/theodo"
+    },
+    {
+      "id": "alter-solutions",
+      "name": "Alter Solutions",
+      "provider": "smartrecruiters",
+      "website": "https://careers.smartrecruiters.com/AlterSolutions"
+    },
+    {
+      "id": "mindera",
+      "name": "Mindera",
+      "provider": "workable",
+      "website": "https://apply.workable.com/minderacraft/"
+    },
+    {
+      "id": "infomineo",
+      "name": "Infomineo",
+      "provider": "workable",
+      "website": "https://apply.workable.com/infomineo/"
+    },
+    {
+      "id": "artefact",
+      "name": "Artefact",
+      "provider": "greenhouse",
+      "website": "https://job-boards.greenhouse.io/artefactlinkedin"
+    },
+    {
+      "id": "arcsen",
+      "name": "Arcsen",
+      "provider": "workable",
+      "website": "https://apply.workable.com/arcsen/"
+    },
+    {
+      "id": "harmattan-ai",
+      "name": "Harmattan AI",
+      "provider": "ashby",
+      "website": "https://jobs.ashbyhq.com/harmattan-ai"
+    },
+    {
+      "id": "the-flex",
+      "name": "The Flex",
+      "provider": "ashby",
+      "website": "https://jobs.ashbyhq.com/the-flex"
+    },
+    {
+      "id": "supportyourapp",
+      "name": "SupportYourApp",
+      "provider": "workable",
+      "website": "https://apply.workable.com/supportyourapp/"
+    },
+    {
+      "id": "capgemini",
+      "name": "Capgemini",
+      "provider": "html",
+      "website": "https://www.capgemini.com/ma-en/job-search/"
+    },
+    {
+      "id": "cgi",
+      "name": "CGI",
+      "provider": "html",
+      "website": "https://www.cgi.com/maroc/fr/carrieres"
+    },
+    {
+      "id": "cegedim",
+      "name": "Cegedim",
+      "provider": "html",
+      "website": "https://careers.cegedim.com/fr"
+    },
+    {
+      "id": "inwi",
+      "name": "inwi",
+      "provider": "teamtailor",
+      "website": "https://jobs.inwi.ma/jobs"
+    },
+    {
+      "id": "leyton-morocco",
+      "name": "Leyton Maroc",
+      "provider": "teamtailor",
+      "website": "https://leytonglobal-morocco.teamtailor.com/jobs"
+    }
+  ]
+}

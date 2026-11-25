@@ -1,0 +1,7 @@
+route,beforeMedianMs,afterMedianMs,improvementPercent,firstBeforeMs,firstAfterMs,repeatedBeforeMedianMs,repeatedAfterMedianMs
+/,100,58,42,586,670,77.5,54.5
+/offres,1035,606,41,1901,737,1025,605.5
+/tech,1376,202,85,1428,281,1369,200
+/sources,1050,190,82,1067,190,1049.5,187.5
+/profil,163,94,42,163,126,173,92
+/offres/41c5ae44ecc59bd0c58a4b2ac08e127b,866,173,80,866,176,747.5,170

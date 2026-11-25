@@ -1,0 +1,220 @@
+{
+  "verifiedAt": "2026-11-25T17:54:53.702Z",
+  "production": "https://virtus-jobs.vercel.app/",
+  "commit": "569fbdfab90888e8e0c4bda3d8e8c96f30f1c653",
+  "releases": [
+    {
+      "stage": "Dublin region",
+      "pr": 13,
+      "commit": "9ab7dd61c38edca303a6e33df6936dfbf366f5ea"
+    },
+    {
+      "stage": "Compact mobile catalog",
+      "pr": 14,
+      "commit": "46abfe2cd70519fb111057b44ee76e1588187bdb"
+    },
+    {
+      "stage": "Paginated database queries",
+      "pr": 15,
+      "commit": "d4a3550a8d66975f292e1dec8f74be67282117ed"
+    },
+    {
+      "stage": "Assets and interactions",
+      "pr": 16,
+      "commit": "569fbdfab90888e8e0c4bda3d8e8c96f30f1c653"
+    }
+  ],
+  "timingMethod": "Five sequential public HTTP requests per route from the same workstation. Completion means HTML response fully received, not visual load. First request is recorded separately and is not guaranteed to be a cold function start.",
+  "comparisons": [
+    {
+      "route": "/",
+      "beforeMedianMs": 100,
+      "afterMedianMs": 58,
+      "improvementPercent": 42,
+      "firstBeforeMs": 586,
+      "firstAfterMs": 670,
+      "repeatedBeforeMedianMs": 77.5,
+      "repeatedAfterMedianMs": 54.5
+    },
+    {
+      "route": "/offres",
+      "beforeMedianMs": 1035,
+      "afterMedianMs": 606,
+      "improvementPercent": 41,
+      "firstBeforeMs": 1901,
+      "firstAfterMs": 737,
+      "repeatedBeforeMedianMs": 1025,
+      "repeatedAfterMedianMs": 605.5
+    },
+    {
+      "route": "/tech",
+      "beforeMedianMs": 1376,
+      "afterMedianMs": 202,
+      "improvementPercent": 85,
+      "firstBeforeMs": 1428,
+      "firstAfterMs": 281,
+      "repeatedBeforeMedianMs": 1369,
+      "repeatedAfterMedianMs": 200
+    },
+    {
+      "route": "/sources",
+      "beforeMedianMs": 1050,
+      "afterMedianMs": 190,
+      "improvementPercent": 82,
+      "firstBeforeMs": 1067,
+      "firstAfterMs": 190,
+      "repeatedBeforeMedianMs": 1049.5,
+      "repeatedAfterMedianMs": 187.5
+    },
+    {
+      "route": "/profil",
+      "beforeMedianMs": 163,
+      "afterMedianMs": 94,
+      "improvementPercent": 42,
+      "firstBeforeMs": 163,
+      "firstAfterMs": 126,
+      "repeatedBeforeMedianMs": 173,
+      "repeatedAfterMedianMs": 92
+    },
+    {
+      "route": "/offres/41c5ae44ecc59bd0c58a4b2ac08e127b",
+      "beforeMedianMs": 866,
+      "afterMedianMs": 173,
+      "improvementPercent": 80,
+      "firstBeforeMs": 866,
+      "firstAfterMs": 176,
+      "repeatedBeforeMedianMs": 747.5,
+      "repeatedAfterMedianMs": 170
+    }
+  ],
+  "browser": {
+    "catalog": {
+      "firstJob": 883,
+      "overflow": false,
+      "theme": "dark",
+      "width": 390
+    },
+    "detail": {
+      "applyTop": 540,
+      "applyUrl": "https://jobs.smartrecruiters.com/ALTEN/744000163481634-data-ops-senior-observabilite-java-grafana-kibana",
+      "overflow": false,
+      "returnUrl": "/offres?q=Java&days=30#offres"
+    },
+    "breakpoints": [
+      {
+        "filters": "none",
+        "logos": 1,
+        "nav": "none",
+        "overflow": false,
+        "width": 320
+      },
+      {
+        "filters": "none",
+        "logos": 1,
+        "nav": "none",
+        "overflow": false,
+        "width": 390
+      },
+      {
+        "filters": "none",
+        "logos": 1,
+        "nav": "none",
+        "overflow": false,
+        "width": 768
+      },
+      {
+        "filters": "block",
+        "logos": 1,
+        "nav": "block",
+        "overflow": false,
+        "width": 1024
+      },
+      {
+        "filters": "block",
+        "logos": 1,
+        "nav": "block",
+        "overflow": false,
+        "width": 1440
+      }
+    ],
+    "search": {
+      "firstTitle": "Data Ops Sénior – Observabilité / Java / Grafana / Kibana",
+      "sectionTop": 80,
+      "url": "https://virtus-jobs.vercel.app/offres?q=Java&city=&days=30&sort=recent#offres"
+    },
+    "lighthouse": {
+      "url": "https://pagespeed.web.dev/analysis/https-virtus-jobs-vercel-app-offres/0vyuijrunvucod47zl445s?form_factor=mobile",
+      "performance": 100,
+      "accessibility": 100,
+      "bestPractices": 100,
+      "seo": 100,
+      "lcpSeconds": 0.9,
+      "fcpSeconds": 0.9,
+      "tbtMs": 30,
+      "cls": 0,
+      "device": "Emulated Moto G Power",
+      "network": "Slow 4G",
+      "version": "13.6.0",
+      "fieldData": false
+    },
+    "originalOfferVerified": {
+      "url": "https://jobs.smartrecruiters.com/ALTEN/744000163481634-data-ops-senior-observabilite-java-grafana-kibana",
+      "company": "ALTEN",
+      "title": "Data Ops Sénior – Observabilité / Java / Grafana / Kibana",
+      "opened": true
+    },
+    "homepageLighthouse": {
+      "url": "https://pagespeed.web.dev/analysis/https-virtus-jobs-vercel-app/vzzgk3dl4q2jmaijwzg8io?form_factor=mobile",
+      "performance": 100,
+      "accessibility": 100,
+      "bestPractices": 100,
+      "seo": 100,
+      "lcpSeconds": 0.8,
+      "fcpSeconds": 0.8,
+      "tbtMs": 40,
+      "cls": 0,
+      "device": "Emulated Moto G Power",
+      "network": "Slow 4G",
+      "version": "13.6.0",
+      "fieldData": false
+    }
+  },
+  "tests": {
+    "passed": 81,
+    "typecheck": "passed",
+    "productionBuild": "passed",
+    "publicDatabaseParityComparisons": 24,
+    "sourceCountsMatch": true,
+    "applicationCI": "https://github.com/yassine-yki/VIrtus_mainrepo/actions/runs/45668170363"
+  },
+  "assets": {
+    "immutableFiles": 12,
+    "originalHeroBytes": 237246,
+    "optimized640WebpBytes": 23308,
+    "optimized640JpegBytes": 31880,
+    "formatNegotiation": true
+  },
+  "snapshots": {
+    "catalog": "C:/Users/nabil/Documents/ChatGPT/applystead clone/.local/performance-mobile-catalog.png",
+    "detail": "C:/Users/nabil/Documents/ChatGPT/applystead clone/.local/performance-mobile-detail.png",
+    "desktop": "C:/Users/nabil/Documents/ChatGPT/applystead clone/.local/performance-desktop-catalog.png"
+  },
+  "rollback": {
+    "ui": "Restore the d4a3550 deployment for the last verified query-enabled UI.",
+    "queries": "Restore the 46abfe2 deployment if a new query caller fails; leave additive database objects in place.",
+    "database": "No drops or data rollback required. Existing matching and legacy RPC functions remain available."
+  },
+  "limitations": [
+    "No real-user field Core Web Vitals data is available yet. Lighthouse is a single emulated lab run.",
+    "Viewport reflow, short screens and landscape were verified; native text-only zoom could not be changed through the in-app browser, and physical iOS/Android checks remain manual.",
+    "The pre-existing general-catalog city dropdown can contain duplicate display names; changing general search semantics was outside this release.",
+    "Pre-existing scheduled collector failures were not repaired or altered."
+  ],
+  "boundaries": {
+    "sourcePermissionsChanged": false,
+    "collectorChanges": false,
+    "authenticationChanged": false,
+    "aiProviderChanged": false,
+    "paidUpgrades": false
+  }
+}
